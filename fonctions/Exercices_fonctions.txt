@@ -1,0 +1,13 @@
+Exercice 1 :
+-Créer une fonction qui soustrait à $a la variable $b (2 paramètres en entrée),
+-la fonction doit retourner le résultat (return).
+
+Exercice 2 :  
+-Créer une fonction qui prend en entrée un nombre à virgule (float),
+- la fonction doit retourner l’arrondi (return) du nombre en entrée (utiliser une fonction interne au langage). 
+
+Exercice 3 :
+-Créer une fonction qui prend en entrée 3 valeurs et retourne somme des 3 valeurs.
+
+Exercice 4 :
+-Créer une fonction qui prend en entrée 3 valeurs et retourne la valeur moyenne des 3 valeurs (saisies en paramètre).

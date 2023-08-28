@@ -1,0 +1,18 @@
+Exercice 1 :
+-Créer une variable $a qui a pour valeur « bonjour »,
+-Afficher le nom de la variable et sa valeur.
+
+Exercice 2 :
+-Créer 1 variable $a qui a pour valeur « bon »,
+-Créer 1 variable $b qui a pour valeur « jour »,
+-Créer 1 variable $c qui a pour valeur 10,
+-Concaténer $a, $b et $c + 1,
+-Afficher le résultat de la concaténation. 
+
+Exercice 3 :
+-Créer une variable $a qui a pour valeur bonjour,
+-Afficher un paragraphe (balise html) et à l’intérieur la phrase suivante :
+l’adrar
+-Ajouter la variable $a avant la phase dans le paragraphe,
+-Cela doit donner :
+ <p>bonjour l’adrar</p>
