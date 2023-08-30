@@ -1,0 +1,8 @@
+Un tableau est qq chose qui va faire correspondre une clé avec une valeur...
+Par exemple clé1 => valeur1 | clé2 => valeur2 | clé3 => valeur3 ...
+La clé est unique (numérique et auto incrémentée)
+La première valeur est 0
+Une fonction permet de delete supprimer (UNSET) 
+UNSET ($tab[1]);
+Ne jamais expedier sur le net le fichier de configuration (paramètres d'application)
+car mon mot de passe y est 

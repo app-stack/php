@@ -1,0 +1,12 @@
+Exercice 1 :
+- Générez un tableau de longueur 50 en injectant des valeurs aléatoires comprises entre -100 et 100
+- Une fois les données injectées, affichez la taille du tableau
+
+Exercice 2 :
+- Créer une fonction qui affiche la valeur la plus grande du tableau (from scratch puis en utilisant une fonction interne à PHP).
+
+Exercice 3 :
+- Créer une fonction qui affiche la moyenne du tableau.
+
+Exercice 4 :
+- Créer une fonction qui affiche la valeur la plus petite du tableau (from scratch et en utilisant une fonction interne à PHP).
