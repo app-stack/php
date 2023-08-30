@@ -1,0 +1,4 @@
+Exercice 1 :
+- A l’aide de la fonction « range » créez un tableau contenant tous les nombres de 0 à 1000.
+- Parcourez le tableau et extrayez tous les nombres premiers dans un autre tableau (un nombre premier n’est divisible que par 1 et par lui-même).
+- Affichez les nombres premiers ainsi obtenus dans une liste HTML (<ul><li>). 
