@@ -1,0 +1,26 @@
+
+<h1>Exercice 1</h1>
+<?php
+            function substract(int|float $a, int|float $b):int|float
+            {
+                $result= $a - $b ;
+
+                return $result ;
+            }
+
+            echo "Test de la soustraction de 7 - 3 (substract(3,7)) = " . substract(3,7);
+        ?>
+
+
+<h1>Exercice 2</h1>
+<?php
+            function arrondi($nb)
+            {
+                $result= round($nb) ;
+
+                return $result ;
+            }
+
+            echo "Test de l'arrondi de 4.59 = " . arrondi(4.59);
+		echo "Test de l'arrondi de 4.59 = " . round(4.59);
+        ?>
