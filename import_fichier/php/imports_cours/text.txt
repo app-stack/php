@@ -1,0 +1,8 @@
+config.php
+m'autorise à voir toute la liste de ceux qui sont autorisés à toucher le php
+
+root.me.org => site pour prévenir les attaques des hackers
+
+portswigger.net => site pour prévenir les attaques des hackers
+
+https://tryhackme.com/

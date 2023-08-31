@@ -1,0 +1,16 @@
+    <?php
+    if(isset($_POST["nom_article"]) && isset($_POST["contenu_article"])){
+
+        /*Connexion bdd */
+        $db = new PDO('mysql:host=docker-lamp-mysql;dbname=articles', 'root','p@ssw0rd',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $db ->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        /* Ajout des input en BDD*/
+        
+        $name = $_POST["nom_article"];
+        $content = $_POST["contenu_article"];
+        $req = $db->prepare("INSERT INTO article(nom_article,contenu_article)VALUES(?,?)");
+        $req->bindParam(1, $name);
+        $req->bindParam(2, $content);
+        $req->execute();    
+    }
+    ?>

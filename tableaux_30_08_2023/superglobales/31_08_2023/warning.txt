@@ -1,0 +1,15 @@
+GET =>
+Uniquement pour de la consultations de données et si je n'envois pas de données sensibles dedans , 
+sinon ces données restent stockées dans l'historique du navigateur par exemple un password
+
+POST =>
+Si j'envois des données sensibles dans le php, 
+Par exemple un password...
+
+Si mon formulaire contient des données sensibles, je n'utilise pas GET, j'utilise POST
+Si mon formulaire ne contient pas des données sensibles, j'utilise GET, je n'utilise pas POST
+
+Dès que le formulaire veut faire des modifications sur la base de données par exemple Ajout de mot de passe, 
+modif d'un article dans un blog, 
+Dès que le client peut faire de la modification sur mon formulaire, 
+tu fais toujours la méthode POST (modifier...)
