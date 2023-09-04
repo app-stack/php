@@ -7,7 +7,8 @@ use articles;
 
 create table article(
 id_article int primary key auto_increment not null,
-nom_article varchar(50) not null,
-contenu_article varchar(250) not null
+nom_article varchar(50),
+contenu_article varchar(250)
 )Engine=InnoDB;
 
+select * from article;

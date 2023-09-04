@@ -1,0 +1,12 @@
+Exercices de coding
+
+https://www.codingame.com/start/fr/
+
+http://fabrice.sincere.free.fr/
+
+----------------------------------------------
+
+5 + 2 = 7
+func(5) = 5 + 2 = 7 = b
+a = 5 
+
