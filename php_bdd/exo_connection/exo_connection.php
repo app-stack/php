@@ -9,7 +9,7 @@
 
 <body>
 
-    <form action="" method="post">
+    <form action="exo_connection.php" method="post">
         <div>
             <h1>Ajoutez un article</h1>
             <br>
@@ -20,7 +20,7 @@
         </div>
         <div>
             <label for="contenu_article">Description:</label><br>
-            <textarea id="contenu_article" name="contenu_article" rows="3" cols="50" required></textarea><br><br>
+            <textarea input id="contenu_article" name="contenu_article" rows="3" cols="50" required></textarea><br><br>
         </div>
         <div>
             <input type="submit" id="envoyez" value="Ajouter" />

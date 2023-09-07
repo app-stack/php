@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form action="" method="post">
+<form action="post" method="post">
         <div>
             <label for="nom_article">Nom de l'article:</label>
             <input id="nom_article" name="nom_article" type="text">
