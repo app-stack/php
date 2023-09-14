@@ -1,0 +1,18 @@
+Installation du module var-dumper :
+https://getcomposer.org/Composer-Setup.exe 
+
+Quand vous avez installé composer et testé la version avec :
+composer --version
+
+lancer la commande ci-dessous :
+composer require symfony/var-dumper
+
+rajouter dans le fichier :
+require './vendor/autoload.php';
+
+Pour utiliser le nouveau dump
+//Dumper et die le code
+dd($variable);
+//Dumper uniquement
+dump($variable);
+

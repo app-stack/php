@@ -1,0 +1,77 @@
+//fichier heritage.php (éxécuter le code)
+<?php
+    require '../vendor/autoload.php';
+    include './Utilisateur.php';
+    include './Admin.php';
+    $admin = new Admin('Admin', 'Admin');
+    $user1 = new Utilisateur('User1', 'User1');
+    $user2 = new Utilisateur('User2', 'User2');
+    $user3 = new Utilisateur('User3', 'User3');
+    $user4 = new Utilisateur('User4', 'User4');
+    $admin->banUser($user1);
+    $admin->banUser($user2);
+    $admin->banUser($user3);
+    $admin->banUser($user4);
+    foreach ($admin->getBans() as $key => $value) {
+       echo "<p>".$value->getNom()." ".$value->getPrenom()."</p>";
+    }
+?>
+
+
+
+//Classe Utilisateur
+<?php
+class Utilisateur{
+    private ?string $nom;
+    private ?string $prenom;
+
+    public function __construct(?string $nom, ?string $prenom){
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+    }
+    public function getNom():?string{
+        return $this->nom;
+    }
+    public function setNom(?string $nom){
+        $this->nom = $nom;
+    }
+    public function getPrenom():?string{
+        return $this->prenom;
+    }
+    public function setPrenom(?string $prenom){
+        $this->prenom = $prenom;
+    }
+}
+?>
+
+
+
+//Classe Admin
+<?php
+class Admin extends Utilisateur{
+    //Attributs
+    private array $bans;
+    //Constructeur
+    public function __construct(?string $nom, ?string $prenom){
+        $this->setNom($nom);
+        $this->setPrenom($prenom);
+        $this->bans = [];
+    }
+    //Getters et Setters
+    //Setter de $bans
+    public function banUser(Utilisateur $ban):void{
+        //version avec les []
+        $this->bans[] = $ban;
+        //version avec la fonction native de php
+        //array_push($this->bans, $ban);
+    }
+    //Getter de $bans
+    public function getBans():array{
+        return $this->bans;
+    }
+    //Méthodes
+    public function debanUser(Utilisateur $deban){
+    }
+}
+?>
+

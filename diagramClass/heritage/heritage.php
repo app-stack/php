@@ -9,4 +9,5 @@
     // var_dump($user1, $admin);
     // echo '</pre>';
     dd($user1);
+    dd($admin);
 ?>

@@ -1,0 +1,19 @@
+Créer un nouveau répertoire  racine du site :
+
+-ajouter un dossier App,
+-ajouter Public,
+-ajouter un fichier index.php,
+
+dans le dossier Public :
+-dossier asset :
+
+dans le dossier asset : 
+-un dossier script (script js),
+-un dossier style (script css),
+-un dossier images (images),
+
+ Dans le dossier App :
+-un dossier Controller (Classe Logique),
+-un dossier Model (Modèle Data),
+-un dossier Vue (vue HTML),
+-un dossier Utils  (Bdd et fonctions utilitaires),
