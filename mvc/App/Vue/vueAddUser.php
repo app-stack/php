@@ -1,12 +1,5 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter un utilisateur</title>
-    
-</head>
-<body>
-    <form action="" method="post">
+<?php ob_start();?>
+    <form action="" method="post" enctype="multipart/form-data">
         <label for="nom_utilisateur">Saisir le nom:</label>
         <input type="text" name="nom_utilisateur">
         <label for="prenom_utilisateur">Saisir le prénom:</label>
@@ -17,9 +10,8 @@
         <input type="password" name="password_utilisateur">
         <label for="repeat_password_utilisateur">Re saisir le Password:</label>
         <input type="password" name="repeat_password_utilisateur">
+        <input type="file" name="image_utilisateur">
         <input type="submit" value="Ajouter" name="submit">
         <div><?=$error?></div>
-        <!-- Toutes les erreurs seront dirigées sur cette page  -->
     </form>
-</body>
-</html>
+<?php $content = ob_get_clean();?>
