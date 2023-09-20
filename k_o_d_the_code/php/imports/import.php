@@ -15,7 +15,7 @@
         //déplacer le fichier importé dans le dossier image à la racine du projet
         $fichier = move_uploaded_file($tmpName, "../../imports/$name");
     }
-     
+    
 
 /*-----------------------------------------------------
                     Formulaire HTML :
