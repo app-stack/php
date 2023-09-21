@@ -40,6 +40,9 @@
             case '/php/mvc/emailtest':
                 $homeController->testMail();
                 break;
+            case '/php/mvc/useractivate':
+                $userController->updateUser();
+                break;
             default:
                 $homeController->get404();
                 break;
@@ -62,9 +65,13 @@
             case '/php/mvc/emailtest':
                 $homeController->testMail();
                 break;
+            case '/php/mvc/useractivate':
+                $userController->updateUser();
+                break;
             default:
                 $homeController->get404();
                 break;
+            
         }
     }
 ?>

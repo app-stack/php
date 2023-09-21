@@ -41,8 +41,7 @@ class UtilisateurController extends Utilisateur{
                         //créer les variables 
                         $destinataire =  $this->getMail();
                         $objet = "clic plus bas pour faire fonctionner le site";
-                        $contenu = "<p>clic en dessous pour accéder au site</p>
-                        <a href='localhost/mvc/useractivate?mail=".$this->getMail()."></a>";
+                        $contenu = "<p>Clic pour acceder au site</p><a href='http://localhost/php/mvc/useractivate?mail=$destinataire'>ici</a>";
                         //Ajouter le compte en BDD
                         $this->add();
                         Messagerie::sendEmail($destinataire, $objet, $contenu);
@@ -97,4 +96,17 @@ class UtilisateurController extends Utilisateur{
         session_destroy();
         header('Location: ./');
     }
+
+    public function updateUser(){
+        if (isset($_GET["mail"])){
+            $this->setMail($_GET["mail"]);
+            if ($this->findOneBy()){
+                $this->update();
+                $error = "Les informations ont été mises à jour";
+            } 
+            else {
+                $error= "Le compte n'existe pas";
+            }
+            $error= "Le paramètre n'existe pas";
+    }}
 }

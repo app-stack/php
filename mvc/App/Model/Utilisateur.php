@@ -115,5 +115,22 @@ class Utilisateur extends BddConnect{
             die('Error : '.$e->getMessage());
         }
     }
+
+    public function update(){
+        try {
+            //récupérer les données de l'objet
+            $mail = $this->getMail();
+            $req = $this->connexion()->prepare(
+                "UPDATE utilisateur SET statut_utilisateur = true WHERE mail_utilisateur = ?");
+            $req->bindParam(1, $mail, \PDO::PARAM_STR);
+            $req->setFetchMode(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Utilisateur::class);
+            $req->execute();
+            return $req->fetch();
+        } catch (\Exception $e) {
+            die('Error : '.$e->getMessage());
+        }
+    }
 }
+
+
 ?> 
