@@ -95,7 +95,8 @@ class Utilisateur extends BddConnect{
             $mail = $this->mail_utilisateur;
             $req = $this->connexion()->prepare(
                 "SELECT id_utilisateur, nom_utilisateur, prenom_utilisateur, 
-                mail_utilisateur, password_utilisateur, statut_utilisateur, image_utilisateur FROM utilisateur WHERE mail_utilisateur = ?");
+                mail_utilisateur, password_utilisateur, statut_utilisateur, image_utilisateur 
+                FROM utilisateur WHERE mail_utilisateur = ?");
             $req->bindParam(1, $mail, \PDO::PARAM_STR);
             $req->setFetchMode(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Utilisateur::class);
             $req->execute();
@@ -106,31 +107,28 @@ class Utilisateur extends BddConnect{
     }
     public function findAll(){
         try {
+            $id = $this->getId();
             $req = $this->connexion()->prepare(
                 "SELECT id_utilisateur, nom_utilisateur, prenom_utilisateur, 
-                mail_utilisateur, image_utilisateur FROM utilisateur");
+                mail_utilisateur, image_utilisateur FROM utilisateur WHERE id_utilisateur != ?");
+            $req->bindParam(1, $id, \PDO::PARAM_INT);
             $req->execute();
             return $req->fetchAll(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Utilisateur::class);
         } catch (\Exception $e) {
             die('Error : '.$e->getMessage());
         }
     }
-
     public function update(){
         try {
-            //récupérer les données de l'objet
-            $mail = $this->getMail();
-            $req = $this->connexion()->prepare(
-                "UPDATE utilisateur SET statut_utilisateur = true WHERE mail_utilisateur = ?");
+            $mail = $this->mail_utilisateur;
+            $req = $this->connexion()->prepare('UPDATE utilisateur SET 
+            statut_utilisateur = true WHERE mail_utilisateur = ?');
             $req->bindParam(1, $mail, \PDO::PARAM_STR);
-            $req->setFetchMode(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Utilisateur::class);
             $req->execute();
-            return $req->fetch();
-        } catch (\Exception $e) {
+        } 
+        catch (\Exception $e) {
             die('Error : '.$e->getMessage());
         }
     }
 }
-
-
 ?> 

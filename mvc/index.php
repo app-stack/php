@@ -37,11 +37,11 @@
             case '/php/mvc/chocoblastall':
                 $chocoblastController->getAllChocoblast();
                 break;
+            case '/php/mvc/chocoblastupdate':
+                $chocoblastController->updateChocoblast();
+                break;
             case '/php/mvc/emailtest':
                 $homeController->testMail();
-                break;
-            case '/php/mvc/useractivate':
-                $userController->updateUser();
                 break;
             default:
                 $homeController->get404();
@@ -66,12 +66,11 @@
                 $homeController->testMail();
                 break;
             case '/php/mvc/useractivate':
-                $userController->updateUser();
+                $userController->activateUser();
                 break;
             default:
                 $homeController->get404();
                 break;
-            
         }
     }
 ?>
