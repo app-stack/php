@@ -8,10 +8,12 @@
     use App\Controller\RolesController;
     use App\Controller\HomeController;
     use App\Controller\ChocoblastController;
+    use App\Controller\CommentaireController;
     $userController = new UtilisateurController();  
     $rolesController = new RolesController();
     $homeController = new HomeController();   
     $chocoblastController = new ChocoblastController();  
+    $commentaireController = new CommentaireController();  
     //utilisation de session_start(pour gérer la connexion au serveur)
     session_start();
     //Analyse de l'URL avec parse_url() et retourne ses composants
@@ -43,6 +45,15 @@
             case '/php/mvc/emailtest':
                 $homeController->testMail();
                 break;
+            case '/php/mvc/chocoblastfilter':
+                $chocoblastController->filterChocoblast();
+                break;
+            case '/php/mvc/commentaireadd':
+                $commentaireController->addCommentaire();
+                break;
+            case '/php/mvc/commentaireall':
+                $commentaireController->allCommentaire();
+                break;
             default:
                 $homeController->get404();
                 break;
@@ -68,9 +79,20 @@
             case '/php/mvc/useractivate':
                 $userController->activateUser();
                 break;
+            case '/php/mvc/chocoblastfilter':
+                $chocoblastController->filterChocoblast();
+                break;
+            case '/php/mvc/commentaireadd':
+            case '/php/mvc/chocoblastupdate':
+                $homeController->get401();
+                break;
+            case '/php/mvc/commentaireall':
+                $commentaireController->allCommentaire();
+                break;
             default:
                 $homeController->get404();
                 break;
         }
     }
 ?>
+

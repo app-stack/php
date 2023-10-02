@@ -17,3 +17,7 @@ dans le dossier asset :
 -un dossier Model (Modèle Data),
 -un dossier Vue (vue HTML),
 -un dossier Utils  (Bdd et fonctions utilitaires),
+
+case '/php/mvc/allcommentaire':
+            //     $commentaireController->allCommentaire();
+            //     break;
