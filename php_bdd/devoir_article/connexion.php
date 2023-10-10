@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Connection php</h1>
+    <h1>Connexion php</h1>
 <?php
     $servername = "mysql:host=127.0.0.1";
     $password = "";
