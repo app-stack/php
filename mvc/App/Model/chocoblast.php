@@ -184,7 +184,7 @@ class Chocoblast extends BddConnect{
             FROM chocoblast 
             INNER JOIN utilisateur AS cible ON chocoblast.cible_chocoblast = cible.id_utilisateur
             INNER JOIN utilisateur AS auteur ON chocoblast.auteur_chocoblast = auteur.id_utilisateur ';
-        
+           
             switch ($filter) {
                 case 1:
                     $order = 'ORDER BY slogan_chocoblast ASC';

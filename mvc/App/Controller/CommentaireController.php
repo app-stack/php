@@ -52,7 +52,7 @@ class CommentaireController extends Commentaire{
         else{
             header('location: ./chocoblastfilter');
         }
-        Template::render('navbar.php', 'footer.php', 'vueAddCommentaire.php','Commenter',   
+        Template::render('navbar.php', 'footer.php', 'vueAddCommentary.php','Commenter',   
         ['script.js', 'main.js'], ['style.css', 'main.css'],$error);
     }
     public function allCommentaire(){

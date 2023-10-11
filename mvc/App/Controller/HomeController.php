@@ -19,7 +19,7 @@ class HomeController{
         ['script.js'], ['style.css'],$error);
     }
     public function testMail(){
-        Messagerie::sendEmail('mathieumithridate@adrar-formation.com','exemple de mail', 'test d\'envoi depuis chocoblast');
+        Messagerie::sendEmail('gadji_developer@laposte.net','exemple de mail', 'test d\'envoi depuis chocoblast');
     }
 }
 ?>
